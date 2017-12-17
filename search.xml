@@ -1,36 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-    
-    <entry>
-      <title><![CDATA[Hello World]]></title>
-      <url>/2017/12/17/hello-world/</url>
-      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-      
-        <categories>
-            
-            <category> Diary </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> hello </tag>
-            
-        </tags>
-        
-    </entry>
-    
-  
-  
+<search>
+  <entry>
+    <title><![CDATA[cleanwebpackplugin]]></title>
+    <url>%2F2017%2F12%2F17%2Fcleanwebpackplugin%2F</url>
+    <content type="text"><![CDATA[clean-webpack-plugin用于在building之前删除你以前build过的文件安装1npm install clean-webpack-plugin --save-dev 用法12345678910111213var CleanWebpackPlugin = require(&apos;clean-webpack-plugin&apos;);module.exports = &#123; plugins: [ new CleanWebpackPlugin([&apos;dist&apos;,&apos;build&apos;], &#123; root:&apos;/full/project/path&apos;, //一个根的绝对路径. verbose: true, //将log写到 console. dry: false, //不要删除任何东西，主要用于测试. exclude: [&apos;shared.js&apos;] //排除不删除的目录，主要用于避免删除公用的文件 &#125;) ]&#125;new CleanWebpackPlugin(paths [, &#123;options&#125;])]]></content>
+      <categories>
+        <category>webpack</category>
+      </categories>
+      <tags>
+        <tag>clean-webpack-plugin</tag>
+        <tag>webpack</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[HtmlWebpackPlugin]]></title>
+    <url>%2F2017%2F12%2F17%2FHtmlWebpackPlugin%2F</url>
+    <content type="text"><![CDATA[定义：这个插件可以帮助生成 HTML 文件 这个插件的两个作用： 为html文件中引入的外部资源如script、link动态添加每次compile后的hash，防止引用缓存的外部文件问题 可以生成创建html入口文件，比如单页面可以生成一个html文件入口，配置N个html-webpack-plugin可以生成N个页面入口 配置 title: 用来生成页面的 title 元素 filename: 输出的 HTML 文件名，默认是 index.html, 也可以直接配置带有子目录。 template: 模板文件路径，支持加载器，比如 html!./index.html inject: true | ‘head’ | ‘body’ | false ,注入所有的资源到特定的 template 或者 templateContent 中，如果设置为 true 或者 body，所有的 javascript 资源将被放置到 body 元素的底部，’head’ 将放置到 head 元素中。 favicon: 添加特定的 favicon 路径到输出的 HTML 文件中。 minify: {} | false , 传递 html-minifier 选项给 minify 输出 hash: true | false, 如果为 true, 将添加一个唯一的 webpack 编译 hash 到所有包含的脚本和 CSS 文件，对于解除 cache 很有用。 cache: true | false，如果为 true, 这是默认值，仅仅在文件修改之后才会发布文件。 showErrors: true | false, 如果为 true, 这是默认值，错误信息会写入到 HTML 页面中 chunks: 允许只添加某些块 (比如[‘index’],仅添加index.js，仅仅 unit test 块)。 chunksSortMode: 允许控制块在添加到页面之前的排序方式，支持的值：’none’ | ‘default’ | {function}-default:’auto’。 excludeChunks: 允许跳过某些块，(比如，跳过单元测试的块)。 clean-webpack-plugin用于在building之前删除你以前build过的文件]]></content>
+      <categories>
+        <category>webpack</category>
+      </categories>
+      <tags>
+        <tag>webpack</tag>
+        <tag>html-webpack-plugin</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2017%2F12%2F17%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+      <categories>
+        <category>Diary</category>
+      </categories>
+      <tags>
+        <tag>hello</tag>
+      </tags>
+  </entry>
 </search>
