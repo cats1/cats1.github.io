@@ -6,6 +6,11 @@ tags:
 - devServer
 ---
 
+#使用错误提示
+## Uncaught Error: [HMR] Hot Module Replacement is disabled
+
+> 在插件中使用new webpack.HotModuleReplacementPlugin() 
+ 
 # devServer:object
 通过来自 webpack-dev-server 的这些选项，能够用多种方式改变其行为。
 devServer: {
