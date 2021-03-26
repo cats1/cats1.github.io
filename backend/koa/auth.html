@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>鉴权 | lana&#39;s home</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="vuepress 前端个人学习网站">
+    
+    <link rel="preload" href="/assets/css/0.styles.98530cad.css" as="style"><link rel="preload" href="/assets/js/app.a4743452.js" as="script"><link rel="preload" href="/assets/js/2.b72805e3.js" as="script"><link rel="preload" href="/assets/js/16.360281d8.js" as="script"><link rel="prefetch" href="/assets/js/10.97c6631e.js"><link rel="prefetch" href="/assets/js/100.ddd238ad.js"><link rel="prefetch" href="/assets/js/101.acf46de3.js"><link rel="prefetch" href="/assets/js/102.7ecc34c5.js"><link rel="prefetch" href="/assets/js/103.9abec0c7.js"><link rel="prefetch" href="/assets/js/104.99a0bd64.js"><link rel="prefetch" href="/assets/js/105.5bd4279e.js"><link rel="prefetch" href="/assets/js/106.4a1a1e6d.js"><link rel="prefetch" href="/assets/js/107.53190e25.js"><link rel="prefetch" href="/assets/js/108.afb416d9.js"><link rel="prefetch" href="/assets/js/109.9c89f8cf.js"><link rel="prefetch" href="/assets/js/11.efe147a8.js"><link rel="prefetch" href="/assets/js/110.77f01a7c.js"><link rel="prefetch" href="/assets/js/111.f8ccec3a.js"><link rel="prefetch" href="/assets/js/112.a1b70a36.js"><link rel="prefetch" href="/assets/js/113.f74d3176.js"><link rel="prefetch" href="/assets/js/114.9f4f70ac.js"><link rel="prefetch" href="/assets/js/115.3e915f82.js"><link rel="prefetch" href="/assets/js/116.21d4d9f8.js"><link rel="prefetch" href="/assets/js/117.ed1ac975.js"><link rel="prefetch" href="/assets/js/118.b60ec45f.js"><link rel="prefetch" href="/assets/js/119.a28f9722.js"><link rel="prefetch" href="/assets/js/12.f8166b62.js"><link rel="prefetch" href="/assets/js/120.5f45ba33.js"><link rel="prefetch" href="/assets/js/121.e2c73c6e.js"><link rel="prefetch" href="/assets/js/122.bea0d35f.js"><link rel="prefetch" href="/assets/js/123.4918a056.js"><link rel="prefetch" href="/assets/js/124.e9d5fd6b.js"><link rel="prefetch" href="/assets/js/125.378cd9ad.js"><link rel="prefetch" href="/assets/js/126.785be7e4.js"><link rel="prefetch" href="/assets/js/127.2dfe1120.js"><link rel="prefetch" href="/assets/js/128.0eeadbcb.js"><link rel="prefetch" href="/assets/js/129.ffd3ffd2.js"><link rel="prefetch" href="/assets/js/13.669aa6cb.js"><link rel="prefetch" href="/assets/js/130.e3caaa90.js"><link rel="prefetch" href="/assets/js/131.8914dd22.js"><link rel="prefetch" href="/assets/js/132.0ae37932.js"><link rel="prefetch" href="/assets/js/133.e989899b.js"><link rel="prefetch" href="/assets/js/134.ea062f20.js"><link rel="prefetch" href="/assets/js/135.6c137b49.js"><link rel="prefetch" href="/assets/js/14.c9aa70a1.js"><link rel="prefetch" href="/assets/js/15.3d05e5f2.js"><link rel="prefetch" href="/assets/js/17.ff7cabb3.js"><link rel="prefetch" href="/assets/js/18.be16eeed.js"><link rel="prefetch" href="/assets/js/19.81b3a31e.js"><link rel="prefetch" href="/assets/js/20.472bc449.js"><link rel="prefetch" href="/assets/js/21.86395f2b.js"><link rel="prefetch" href="/assets/js/22.6c69ed50.js"><link rel="prefetch" href="/assets/js/23.2f198631.js"><link rel="prefetch" href="/assets/js/24.748c9bc2.js"><link rel="prefetch" href="/assets/js/25.c5065323.js"><link rel="prefetch" href="/assets/js/26.61d441a1.js"><link rel="prefetch" href="/assets/js/27.bfd0a986.js"><link rel="prefetch" href="/assets/js/28.bafeb054.js"><link rel="prefetch" href="/assets/js/29.0d2a1bfd.js"><link rel="prefetch" href="/assets/js/3.7f8809fd.js"><link rel="prefetch" href="/assets/js/30.8bb40757.js"><link rel="prefetch" href="/assets/js/31.eac619f5.js"><link rel="prefetch" href="/assets/js/32.04c63c5c.js"><link rel="prefetch" href="/assets/js/33.ae09c55e.js"><link rel="prefetch" href="/assets/js/34.1145a6f4.js"><link rel="prefetch" href="/assets/js/35.feb9083f.js"><link rel="prefetch" href="/assets/js/36.a586ce8a.js"><link rel="prefetch" href="/assets/js/37.c61e20e9.js"><link rel="prefetch" href="/assets/js/38.991c3427.js"><link rel="prefetch" href="/assets/js/39.23356a49.js"><link rel="prefetch" href="/assets/js/4.6819ae80.js"><link rel="prefetch" href="/assets/js/40.a3ca9111.js"><link rel="prefetch" href="/assets/js/41.649b9d9b.js"><link rel="prefetch" href="/assets/js/42.fde8ad7b.js"><link rel="prefetch" href="/assets/js/43.2d876a7c.js"><link rel="prefetch" href="/assets/js/44.64c20de7.js"><link rel="prefetch" href="/assets/js/45.a901a632.js"><link rel="prefetch" href="/assets/js/46.4ac83b64.js"><link rel="prefetch" href="/assets/js/47.2b45c49a.js"><link rel="prefetch" href="/assets/js/48.2bc12623.js"><link rel="prefetch" href="/assets/js/49.52a95dcd.js"><link rel="prefetch" href="/assets/js/5.20de2bc4.js"><link rel="prefetch" href="/assets/js/50.f445c922.js"><link rel="prefetch" href="/assets/js/51.07570e18.js"><link rel="prefetch" href="/assets/js/52.cf21a2b8.js"><link rel="prefetch" href="/assets/js/53.77792ddd.js"><link rel="prefetch" href="/assets/js/54.f19c487a.js"><link rel="prefetch" href="/assets/js/55.7fb0d05b.js"><link rel="prefetch" href="/assets/js/56.62fd0b66.js"><link rel="prefetch" href="/assets/js/57.1d6b0809.js"><link rel="prefetch" href="/assets/js/58.1aed920b.js"><link rel="prefetch" href="/assets/js/59.c2ab9dbe.js"><link rel="prefetch" href="/assets/js/6.e9784f3e.js"><link rel="prefetch" href="/assets/js/60.f4e387a9.js"><link rel="prefetch" href="/assets/js/61.735cc066.js"><link rel="prefetch" href="/assets/js/62.312489f2.js"><link rel="prefetch" href="/assets/js/63.dd2a2d4e.js"><link rel="prefetch" href="/assets/js/64.67dfd073.js"><link rel="prefetch" href="/assets/js/65.c2c22de8.js"><link rel="prefetch" href="/assets/js/66.7ea30a4b.js"><link rel="prefetch" href="/assets/js/67.6913be8c.js"><link rel="prefetch" href="/assets/js/68.b743701c.js"><link rel="prefetch" href="/assets/js/69.088259eb.js"><link rel="prefetch" href="/assets/js/7.80ddef84.js"><link rel="prefetch" href="/assets/js/70.10e2101b.js"><link rel="prefetch" href="/assets/js/71.11121db3.js"><link rel="prefetch" href="/assets/js/72.38811b9b.js"><link rel="prefetch" href="/assets/js/73.b5030976.js"><link rel="prefetch" href="/assets/js/74.d218c8d5.js"><link rel="prefetch" href="/assets/js/75.89c8d415.js"><link rel="prefetch" href="/assets/js/76.998def7e.js"><link rel="prefetch" href="/assets/js/77.6cff4b72.js"><link rel="prefetch" href="/assets/js/78.45b13ba4.js"><link rel="prefetch" href="/assets/js/79.50d5b3d0.js"><link rel="prefetch" href="/assets/js/8.4ebeab97.js"><link rel="prefetch" href="/assets/js/80.e38925eb.js"><link rel="prefetch" href="/assets/js/81.c712e794.js"><link rel="prefetch" href="/assets/js/82.f4018c72.js"><link rel="prefetch" href="/assets/js/83.878fb392.js"><link rel="prefetch" href="/assets/js/84.7ddaa3ca.js"><link rel="prefetch" href="/assets/js/85.06c8fa8b.js"><link rel="prefetch" href="/assets/js/86.b889a2e3.js"><link rel="prefetch" href="/assets/js/87.2f3171f1.js"><link rel="prefetch" href="/assets/js/88.1b0c6839.js"><link rel="prefetch" href="/assets/js/89.293034a1.js"><link rel="prefetch" href="/assets/js/9.07e73bd0.js"><link rel="prefetch" href="/assets/js/90.cdd9df6a.js"><link rel="prefetch" href="/assets/js/91.e53063a5.js"><link rel="prefetch" href="/assets/js/92.0a41da3b.js"><link rel="prefetch" href="/assets/js/93.83c37c7e.js"><link rel="prefetch" href="/assets/js/94.14eea0cb.js"><link rel="prefetch" href="/assets/js/95.18279896.js"><link rel="prefetch" href="/assets/js/96.e06d8e4e.js"><link rel="prefetch" href="/assets/js/97.2b60994e.js"><link rel="prefetch" href="/assets/js/98.28ad17a5.js"><link rel="prefetch" href="/assets/js/99.2abf3996.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.98530cad.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="lana's home" class="logo"> <span class="site-name can-hide">lana's home</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="随笔" class="dropdown-title"><span class="title">随笔</span> <span class="arrow down"></span></button> <button type="button" aria-label="随笔" class="mobile-dropdown-title"><span class="title">随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/front/html5/" class="nav-link">
+  Html5
+</a></li><li class="dropdown-subitem"><a href="/front/css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-subitem"><a href="/front/js/" class="nav-link">
+  js
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/backend/nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-subitem"><a href="/backend/koa/" class="nav-link router-link-active">
+  Koa
+</a></li><li class="dropdown-subitem"><a href="/backend/mongodb/" class="nav-link">
+  Mongodb
+</a></li></ul></li><li class="dropdown-item"><h4>
+          服务器
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/backend/nginx/" class="nav-link">
+  Nginx
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/guide/guide.html" class="nav-link">
+  指引
+</a></div><div class="nav-item"><a href="https://gitee.com/lanasine" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/cats1/vuepresshome" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="随笔" class="dropdown-title"><span class="title">随笔</span> <span class="arrow down"></span></button> <button type="button" aria-label="随笔" class="mobile-dropdown-title"><span class="title">随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/front/html5/" class="nav-link">
+  Html5
+</a></li><li class="dropdown-subitem"><a href="/front/css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-subitem"><a href="/front/js/" class="nav-link">
+  js
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/backend/nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-subitem"><a href="/backend/koa/" class="nav-link router-link-active">
+  Koa
+</a></li><li class="dropdown-subitem"><a href="/backend/mongodb/" class="nav-link">
+  Mongodb
+</a></li></ul></li><li class="dropdown-item"><h4>
+          服务器
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/backend/nginx/" class="nav-link">
+  Nginx
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/guide/guide.html" class="nav-link">
+  指引
+</a></div><div class="nav-item"><a href="https://gitee.com/lanasine" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/cats1/vuepresshome" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Backend</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Api</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Docker</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>Koa</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/backend/koa/" aria-current="page" class="sidebar-link">Koa2</a></li><li><a href="/backend/koa/auth.html" aria-current="page" class="active sidebar-link">鉴权</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/backend/koa/auth.html#http-basic-authentication-使用较少" class="sidebar-link">HTTP Basic Authentication(使用较少)</a></li><li class="sidebar-sub-header"><a href="/backend/koa/auth.html#session-cookie" class="sidebar-link">session-cookie</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/backend/koa/auth.html#cookie" class="sidebar-link">cookie</a></li><li class="sidebar-sub-header"><a href="/backend/koa/auth.html#session" class="sidebar-link">session</a></li><li class="sidebar-sub-header"><a href="/backend/koa/auth.html#redis" class="sidebar-link">redis</a></li></ul></li><li class="sidebar-sub-header"><a href="/backend/koa/auth.html#token" class="sidebar-link">Token</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/backend/koa/auth.html#token认证流程" class="sidebar-link">Token认证流程</a></li><li class="sidebar-sub-header"><a href="/backend/koa/auth.html#token优点与缺点" class="sidebar-link">Token优点与缺点</a></li><li class="sidebar-sub-header"><a href="/backend/koa/auth.html#token过期与refresh-token" class="sidebar-link">Token过期与Refresh Token</a></li><li class="sidebar-sub-header"><a href="/backend/koa/auth.html#jwt-json-web-token" class="sidebar-link">JWT（JSON Web Token）</a></li><li class="sidebar-sub-header"><a href="/backend/koa/auth.html#单点登录-sso" class="sidebar-link">单点登录（sso）</a></li></ul></li><li class="sidebar-sub-header"><a href="/backend/koa/auth.html#oauth" class="sidebar-link">OAuth</a></li></ul></li><li><a href="/backend/koa/controller.html" class="sidebar-link">控制器</a></li><li><a href="/backend/koa/download.html" class="sidebar-link">文件下载</a></li><li><a href="/backend/koa/jwt.html" class="sidebar-link">JWT（json web token）</a></li><li><a href="/backend/koa/koa-body.html" class="sidebar-link">koa-bodyparser</a></li><li><a href="/backend/koa/koa-json-error.html" class="sidebar-link">错误处理中间件 koa-json-error</a></li><li><a href="/backend/koa/koa-router.html" class="sidebar-link">koa路由</a></li><li><a href="/backend/koa/koa-session.html" class="sidebar-link">koa-session</a></li><li><a href="/backend/koa/koa-static.html" class="sidebar-link">静态资源中间件koa-static</a></li><li><a href="/backend/koa/koa-websocket.html" class="sidebar-link">websocket</a></li><li><a href="/backend/koa/log4js.html" class="sidebar-link">log4js</a></li><li><a href="/backend/koa/middleware.html" class="sidebar-link">中间件</a></li><li><a href="/backend/koa/upload.html" class="sidebar-link">上传文件</a></li></ul></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Mongodb</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Nginx</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Nodejs</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Redis</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Front</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Guide</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="鉴权"><a href="#鉴权" class="header-anchor">#</a> 鉴权</h1> <p>前端的权限控制主要有三种：路由控制（路由的跳转）、视图控制（按钮级别）和请求控制（请求拦截器）。这几种方式之后再详谈，前端做完权限控制，后台还是需要验证每一个接口，这就是鉴权。现在前后端配合鉴权的方式主要有以下几种：</p> <ul><li>HTTP Basic Authentication (HTTP基本认证)</li> <li>session-cookie</li> <li>Token 验证(JWT/SSO)</li> <li>OAuth(开放授权)</li></ul> <h2 id="http-basic-authentication-使用较少"><a href="#http-basic-authentication-使用较少" class="header-anchor">#</a> HTTP Basic Authentication(使用较少)</h2> <p>这种认证方式是浏览器遵守http协议实现的基本授权方式,HTTP协议进行通信的过程中，HTTP协议定义了基本认证认证允许HTTP服务器对客户端进行用户身份证的方法。目前基本没有再使用这种认证方式的,一些老项目的内网认证可能还会有.</p> <h2 id="session-cookie"><a href="#session-cookie" class="header-anchor">#</a> session-cookie</h2> <p>session-cookie认证这个方式是利用服务器端的session（会话）和浏览器端的cookie来实现前后端的认证，<strong>由于http请求时是无状态的</strong>，服务器正常情况下是不知道当前请求之前有没有来过，这个时候我们如果要记录状态，就需要在服务器端创建一个会话(session),将同一个客户端的请求都维护在各自得会会话中，每当请求到达服务器端的时候，先去查一下该客户端有没有在服务器端创建session，如果有则已经认证成功了，否则就没有认证。</p> <blockquote><ol><li>服务器在接受客户端首次访问时在服务器端创建seesion，然后保存seesion(我们可以将seesion保存在 内存中，也可以保存在redis中，推荐使用后者)，然后给这个session生成一个唯一的标识字符串,然后在 响应头中种下这个唯一标识字符串。</li> <li>签名。这一步通过秘钥对sid进行签名处理，避免客户端修改sid。(非必需步骤)</li> <li>浏览器中收到请求响应的时候会解析响应头，然后将sid保存在本地cookie中，浏览器在下次http请求的 请求头中会带上该域名下的cookie信息。</li> <li>服务器在接受客户端请求时会去解析请求头cookie中的sid，然后根据这个sid去找服务器端保存的该客 户端的session，然后判断该请求是否合法。</li></ol></blockquote> <p><strong>弊端:</strong></p> <ul><li>服务器内存消耗大: 用户每做一次应用认证,应用就会在服务端做一次记录,以方便用户下次请求时使用,通常来讲session保存在内存中,随着认证用户的增加,服务器的消耗就会很大.</li> <li>易受到CSRF攻击: 基于cookie的一种跨站伪造攻击, 基于cookie来进行识别用户的话,用户本身就携带了值,cookie被截获,用户就很容易被伪造.</li></ul> <h3 id="cookie"><a href="#cookie" class="header-anchor">#</a> cookie</h3> <p>Http协议是一个无状态的协议，服务器不会知道到底是哪一台浏览器访问了它，因此需要一个标识用来让服务器区分不同的浏览器。cookie就是这个管理服务器与客户端之间状态的标识。
+ cookie的原理是，浏览器第一次向服务器发送请求时，服务器在response头部设置Set-Cookie字段，浏览器收到响应就会设置cookie并存储，在下一次该浏览器向服务器发送请求时，就会在request头部自动带上Cookie字段，服务器端收到该cookie用以区分不同的浏览器。当然，这个cookie与某个用户的对应关系应该在第一次访问时就存在服务器端，这时就需要session了。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const http = require('http')
+http.createServer((req, res) =&gt; {
+  if (req.url === '/favicon.ico') {
+    return
+  } else {
+    res.setHeader('Set-Cookie', 'name=zhunny')
+    res.end('Hello Cookie')
+  }
+}).listen(3000) 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h3 id="session"><a href="#session" class="header-anchor">#</a> session</h3> <p>session是会话的意思，浏览器第一次访问服务端，服务端就会创建一次会话，在会话中保存标识该浏览器的信息。它与cookie的区别就是session是缓存在服务端的，cookie 则是缓存在客户端，他们都由服务端生成，为了弥补Http协议无状态的缺陷。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const http = require('http')
+//此时session存在内存中
+const session = {}
+http.createServer((req, res) =&gt; {
+  const sessionKey = 'sid'
+  if (req.url === '/favicon.ico') {
+   return
+  } else {
+    const cookie = req.headers.cookie
+    //再次访问，对sid请求进行认证
+    if (cookie &amp;&amp; cookie.indexOf(sessionKey) &gt; -1) {
+      res.end('Come Back')
+    }
+    //首次访问，生成sid，保存在服务器端
+    else {
+      const sid = (Math.random() * 9999999).toFixed()
+      res.setHeader('Set-Cookie', `${sessionKey}=${sid}`)
+      session[sid] = { name: 'zhunny' }
+      res.end('Hello Cookie')
+    }
+  }
+}).listen(3000)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><h3 id="redis"><a href="#redis" class="header-anchor">#</a> redis</h3> <p>redis是一个键值服务器，可以专门放session的键值对。如何在koa中使用session:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const koa = require('koa')
+const app = new koa()
+const session = require('koa-session')
+const redisStore = require('koa-redis')
+const redis = require('redis')
+const redisClient = redis.createClient(6379, 'localhost')
+const wrapper = require('co-redis')
+const client = wrapper(redisClient)
+//加密sessionid
+app.keys = ['session secret']
+const SESS_CONFIG = {
+  key: 'kbb:sess',
+  //此时让session存储在redis中
+  store: redisStore({ client })
+}
+app.use(session(SESS_CONFIG, app))
+app.use(ctx =&gt; {
+  //查看redis中的内容
+  redisClient.keys('*', (errr, keys) =&gt; {
+    console.log('keys:', keys)
+    keys.forEach(key =&gt; {
+      redisClient.get(key, (err, val) =&gt; {
+        console.log(val)
+      })
+    })
+  })
+  if (ctx.path === '/favicon.ico') return
+  let n = ctx.session.count || 0
+  ctx.session.count = ++n
+  ctx.body = `第${n}次访问`
+})
+app.listen(3000)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br></div></div><h4 id="用户登录认证"><a href="#用户登录认证" class="header-anchor">#</a> 用户登录认证</h4> <p>使用session-cookie做登录认证时，登录时存储session，退出登录时删除session，而其他的需要登录后才能操作的接口需要提前验证是否存在session，存在才能跳转页面，不存在则回到登录页面。
+  在koa中做一个验证的中间件，在需要验证的接口中使用该中间件。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>//中间件 auth.js
+module.exports = async (ctx, next) =&gt; {
+  if (!ctx.session.userinfo) {
+    ctx.body = {
+      ok: 0,
+      message: &quot;用户未登录&quot; };
+  } else {
+    await next();
+} };
+//需要验证的接口
+router.get('/getUser', require('auth'), async (ctx) =&gt; {
+  ctx.body = {
+      message: &quot;获取数据成功&quot;,
+      userinfo: ctx.session.userinfo
+  }
+})
+//登录
+router.post('/login', async (ctx) =&gt; {
+  const {
+    body
+  } = ctx.request
+  console.log('body', body)
+  //设置session
+  ctx.session.userinfo = body.username;
+  ctx.body = {
+    message: &quot;登录成功&quot;
+  }
+})
+//登出
+router.post('/logout', async (ctx) =&gt; {
+  //设置session
+  delete ctx.session.userinfo
+  ctx.body = {
+    message: &quot;登出系统&quot;
+  }
+})
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br></div></div><h2 id="token"><a href="#token" class="header-anchor">#</a> Token</h2> <p>token是用户身份的验证方式，我们通常叫它：令牌。浏览器第一次访问服务端时会签发一张令牌，之后浏览器每次携带这张令牌访问服务端就会认证该令牌是否有效，只要服务端可以解密该令牌，就说明请求是合法的，令牌中包含的用户信息还可以区分不同身份的用户。一般token由用户信息、时间戳和由hash算法加密的签名构成。当用户第一次登录后，服务器生成一个token并将此token返回给客户端，以后客户端只需带上这个token前来请求数据即可，<strong>无需再次带上用户名和密码。</strong></p> <h3 id="token认证流程"><a href="#token认证流程" class="header-anchor">#</a> Token认证流程</h3> <blockquote><ol><li>客户端使用用户名跟密码请求登录</li> <li>服务端收到请求，去验证用户名与密码</li> <li>验证成功后，服务端会签发一个 Token，再把这个 Token 发送给客户端</li> <li>客户端收到 Token 以后可以把它存储起来，比如放在 Cookie 里或者 Local Storage 里</li> <li>客户端每次向服务端请求资源的时候需要带着服务端签发的 Token</li> <li>服务端收到请求，然后去验证客户端请求里面带着的 Token（request头部添加Authorization），如果验证成功，就向客户端返回请求的数据，如果不成功返回401错误码，鉴权失败。</li></ol></blockquote> <h3 id="token优点与缺点"><a href="#token优点与缺点" class="header-anchor">#</a> Token优点与缺点</h3> <h4 id="优点"><a href="#优点" class="header-anchor">#</a> <strong>优点:</strong></h4> <ul><li>Token 完全由应用管理，所以它可以避开同源策略. (Cookie是不允许垮域访问的,token不存在)</li> <li>Token 可以避免 CSRF 攻击(也是因为不需要cookie了)</li> <li>Token 可以是无状态的，可以在多个服务间共享</li> <li>Token 支持手机端访问(Cookie不支持手机端访问)</li></ul> <p>服务器只需要对浏览器传来的token值进行解密，解密完成后进行用户数据的查询，如果查询成功，则通过认证.所以，即时有了多台服务器，服务器也只是做了token的解密和用户数据的查询，<strong>它不需要在服务端去保留用户的认证信息或者会话信息，这就意味着基于token认证机制的应用不需要去考虑用户在哪一台服务器登录了</strong>，这就为应用的扩展提供了便利，解决了session扩展性的弊端。</p> <h4 id="缺点"><a href="#缺点" class="header-anchor">#</a> <strong>缺点:</strong></h4> <ul><li>占带宽: 正常情况下token要比 session_id更大，需要消耗更多流量，挤占更多带宽.(不过几乎可以忽略)</li> <li>性能问题: 相比于session-cookie来说，token需要服务端花费更多的时间和性能来对token进行解密验证.其实Token相比于session-cookie来说就是一个&quot;时间换空间&quot;的方案.</li></ul> <h4 id="token和session的区别"><a href="#token和session的区别" class="header-anchor">#</a> Token和session的区别</h4> <ol><li><p>session-cookie的缺点：</p> <p>（1）认证方式局限于在浏览器中使用，cookie是浏览器端的机制，如果在app端就无法使用cookie。</p> <p>（2）为了满足全局一致性，我们最好把session存储在redis中做持久化，而在分布式环境下，我们可能需要在每个服务器上都备份，占用了大量的存储空间。</p> <p>（3）在不是Https协议下使用cookie，容易受到CSRF跨站点请求伪造攻击。</p></li> <li><p>token的缺点：</p> <p>（1）加密解密消耗使得token认证比session-cookie更消耗性能。</p> <p>（2）token比sessionId大，更占带宽。</p></li> <li><p>两者对比，它们的区别显而易见：</p> <p>（1）token认证不局限于cookie，这样就使得这种认证方式可以支持多种客户端，而不仅是浏览器。且不受同源策略的影响。</p> <p>（2）不使用cookie就可以规避CSRF攻击。</p> <p>（3）token不需要存储，token中已包含了用户信息，服务器端变成无状态，服务器端只需要根据定义的规则校验这个token是否合法就行。这也使得token 的可扩展性更强。</p> <blockquote><ol><li><strong>使用Token,服务端不需要保存状态.</strong> 在session中sessionid 是一个唯一标识的字符串，服务端是根据这个字符串，来查询在服务器端保持的session，这里面才保存着用户的登陆状态。但是token本身就是一种登陆成功凭证，他是在登陆成功后根据某种规则生成的一种信息凭证，他里面本身就保存着用户的登陆状态。服务器端只需要根据定义的规则校验这个token是否合法就行。</li> <li>**Token不需要借助cookie的.**session-cookie是需要cookie配合的，那么在http代理客户端的选择上就只有浏览器了，因为只有浏览器才会去解析请求响应头里面的cookie,然后每次请求再默认带上该域名下的cookie。但是我们知道http代理客户端不只有浏览器，还有原生APP等等，这个时候cookie是不起作用的，或者浏览器端是可以禁止cookie的(虽然可以，但是这基本上是属于吃饱没事干的人干的事)，但是token 就不一样，他是登陆请求在登陆成功后再请求响应体中返回的信息，客户端在收到响应的时候，可以把他存在本地的cookie,storage，或者内存中，然后再下一次请求的请求头重带上这个token就行了。简单点来说cookie-session机制他限制了客户端的类型，而token验证机制丰富了客户端类型。</li> <li>时效性。session-cookie的sessionid实在登陆的时候生成的而且在登出事时一直不变的，在一定程度上安全就会低，而token是可以在一段时间内动态改变的。</li> <li>可扩展性。token验证本身是比较灵活的，一是token的解决方案有许多，常用的是JWT,二来我们可以基于token验证机制，专门做一个鉴权服务，用它向多个服务的请求进行统一鉴权。</li></ol></blockquote></li></ol> <h3 id="token过期与refresh-token"><a href="#token过期与refresh-token" class="header-anchor">#</a> Token过期与Refresh Token</h3> <p><strong>Token过期:</strong></p> <p>token是访问特定资源的凭证，出于安全考虑,肯定是要有过期时间的。要不然一次登录便可能一直使用，那token认证还有什么意义? token可定是有过期时间的,一般不会很长,不会超高一个小时.</p> <p><strong>Refresh Token :</strong></p> <p>为什么需要refresh token?如果token过期了，就要重新获取。继续重复第一次获取token的过程(比如登录，扫描授权等)，每一小时就必须获取一次! 这样做是非常不好的用户体验。为了解决这个问题,于是就有了refresh token.<strong>通过refresh token去重新获取新的 token.</strong></p> <p>refresh token，也是加密字符串，并且和token是相关联的。与获取资源的token不同，<strong>refresh token的作用仅仅是获取新的token</strong>，因此其作用和安全性要求都较低，所以其过期时间也可以设置得长一些,可以以天为最小单位。当然如果refresh token过期了,还是需要重新登录验证的.</p> <h3 id="jwt-json-web-token"><a href="#jwt-json-web-token" class="header-anchor">#</a> JWT（JSON Web Token）</h3> <p>JWT 的原理是，服务器认证以后，生成一个 JSON 对象，这个JSON对象肯定不能裸传给用户，那谁都可以篡改这个对象发送请求。因此这个JSON对象会被服务器端签名加密后返回给用户，返回的内容就是一张令牌，以后用户每次访问服务器端就带着这张令牌。这个JSON对象可能包含的内容就是用户的信息，用户的身份以及令牌的过期时间。</p> <p>JWT 的原理是，服务器认证以后，生成一个 JSON 对象，发回给用户.之后用户与服务器通信的时候.服务器完全只靠这个对象认定用户身份。为了防止用户篡改数据，服务器在生成这个对象的时候，<strong>会加上签名</strong>。</p> <p>jwt最大的特点就是: <strong>服务器就不保存任何 session 数据了，也就是说，服务器变成无状态了，从而比较容易实现扩展。</strong></p> <h5 id="jwt的组成部分-数据结构"><a href="#jwt的组成部分-数据结构" class="header-anchor">#</a> JWT的组成部分（数据结构）</h5> <p>它是一个很长的<strong>字符串</strong>，中间用点（.）分隔成三个部分。它由三部分组成：Header（头部）、Payload（负载）、Signature（签名）。</p> <blockquote><ol><li>Header部分是一个JSON对象，描述JWT的元数据。一般描述信息为该Token的加密算法以及Token的类型。<code>{&quot;alg&quot;: &quot;HS256&quot;,&quot;typ&quot;: &quot;JWT&quot;}</code>的意思就是，该token使用HS256加密，token类型是JWT。这个部分基本相当于明文，它将这个JSON对象做了一个Base64转码，变成一个字符串。Base64编码解码是有算法的，解码过程是可逆的。头部信息默认携带着两个字段。</li> <li>Payload 部分也是一个 JSON  对象，用来存放实际需要传递的数据。有7个官方字段，还可以在这个部分定义私有字段。一般存放用户名、用户身份以及一些JWT的描述字段。它也只是做了一个Base64编码，因此肯定不能在其中存放秘密信息，比如说登录密码之类的。<strong>注意:</strong> <strong>JWT 默认是不加密的，任何人都可以读到，所以不要把秘密信息放在这个部分。</strong></li> <li>Signature是对前面两个部分的签名，防止数据篡改，如果前面两段信息被人修改了发送给服务器端，此时服务器端是可利用签名来验证信息的正确性的。签名需要密钥（<strong>只有服务器才知道，不能泄露给用户</strong>），密钥是服务器端保存的，用户不知道。算出签名以后，把 Header、Payload、Signature 三个部分拼成一个字符串，每个部分之间用&quot;点&quot;（.）分隔，就可以返回给用户。</li></ol></blockquote> <h5 id="jwt的特点"><a href="#jwt的特点" class="header-anchor">#</a> JWT的特点</h5> <blockquote><ol><li>JWT 默认是不加密，但也是可以加密的。生成原始 Token 以后，可以用密钥再加密一次。</li> <li>JWT 不加密的情况下，不能将秘密数据写入 JWT。</li> <li>JWT 不仅可以用于认证，也可以用于交换信息。有效使用 JWT，可以降低服务器查询数据库的次数。</li> <li>JWT 的最大缺点是，由于服务器不保存 session 状态，因此无法在使用过程中废止某个 token，或者更改 token 的权限。也就是说，一旦 JWT 签发了，在到期之前就会始终有效，除非服务器部署额外的逻辑。</li> <li>JWT 本身包含了认证信息，一旦泄露，任何人都可以获得该令牌的所有权限。为了减少盗用，JWT 的有效期应该设置得比较短。对于一些比较重要的权限，使用时应该再次对用户进行认证。</li> <li>为了减少盗用，JWT 不应该使用 HTTP 协议明码传输，要使用 HTTPS 协议传输。</li></ol></blockquote> <h5 id="jwt验证用户登录"><a href="#jwt验证用户登录" class="header-anchor">#</a> JWT验证用户登录</h5> <div class="language- line-numbers-mode"><pre class="language-text"><code>//前端代码
+//axios的请求拦截器，在每个request请求头上加JWT认证信息
+axios.interceptors.request.use(
+    config =&gt; {
+        const token = window.localStorage.getItem(&quot;token&quot;);
+        if (token) {
+        // 判断是否存在token，如果存在的话，则每个http header都加上token
+        // Bearer是JWT的认证头部信息
+            config.headers.common[&quot;Authorization&quot;] = &quot;Bearer &quot; + token;
+        }
+        return config;
+    },
+    err =&gt; {
+        return Promise.reject(err);
+    }
+);
+//登录方法：在将后端返回的JWT存入localStorage
+async login() {
+    const res = await axios.post(&quot;/login-token&quot;, {
+        username: this.username,
+        password: this.password
+    });
+    localStorage.setItem(&quot;token&quot;, res.data.token);
+},
+//登出方法：删除JWT
+async logout() {
+    localStorage.removeItem(&quot;token&quot;);
+},
+async getUser() {
+    await axios.get(&quot;/getUser-token&quot;);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>//后端代码
+const jwt = require(&quot;jsonwebtoken&quot;);
+const jwtAuth = require(&quot;koa-jwt&quot;);
+//用来签名的密钥
+const secret = &quot;it's a secret&quot;;
+router.post(&quot;/login-token&quot;, async ctx =&gt; {
+  const { body } = ctx.request;
+  //登录逻辑，略，即查找数据库，若该用户和密码合法，即将其信息生成一个JWT令牌传给用户
+  const userinfo = body.username;
+  ctx.body = {
+    message: &quot;登录成功&quot;,
+    user: userinfo,
+    // 生成 token 返回给客户端
+    token: jwt.sign(
+      {
+        data: userinfo,
+        // 设置 token 过期时间，一小时后，秒为单位
+        exp: Math.floor(Date.now() / 1000) + 60 * 60
+      },
+      secret
+    )
+  };
+});
+//jwtAuth这个中间件会拿着密钥解析JWT是否合法。
+//并且把JWT中的payload的信息解析后放到state中，ctx.state用于中间件的传值。
+router.get(
+  &quot;/getUser-token&quot;,
+  jwtAuth({
+    secret
+  }),
+  async ctx =&gt; {
+    // 验证通过，state.user
+    console.log(ctx.state.user);
+    ctx.body = {
+      message: &quot;获取数据成功&quot;,
+      userinfo: ctx.state.user.data 
+    };
+  }
+)
+//这种密码学的方式使得token不需要存储，只要服务端能拿着密钥解析出用户信息，就说明该用户是合法的。
+//若要更进一步的权限验证，需要判断解析出的用户身份是管理员还是普通用户。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br></div></div><p>首次登录时，后端服务器判断用户账号密码正确之后，根据用户id、用户名、定义好的秘钥、过期时间生成 token ，返回给前端； 前端拿到后端返回的 token ,存储在 localStroage 和 Vuex 里； 前端每次路由跳转，判断 localStroage 有无 token ，没有则跳转到登录页，有则请求获取用户信息，改变登录状态； 每次请求接口，在 Axios 请求头里携带 token; 后端接口判断请求头有无 token，没有或者 token 过期，返回401； 前端得到 401 状态码，重定向到登录页面。</p> <h5 id="后端主动让jwt失效的方法"><a href="#后端主动让jwt失效的方法" class="header-anchor">#</a> 后端主动让JWT失效的方法</h5> <p>前面说过JWT一旦签发了,就不再收服务端控制了.因为它在服务端没有记录,是无状态的,是它最大的优点也是最大的缺点.这样就会造成一种不可控性.</p> <p>例如:如果用户修改了,那他之前未到期的token怎么废弃掉???此时服务端是没有记录的,它是不知道哪些未到期的token是被废弃了的.为了解决这个问题,其实是<strong>没有完美的方法的!</strong> 都需要后端添加状态,只是那种方法开销最小.</p> <p>目前常见的处理方法有:</p> <blockquote><ul><li>1,将 token 存入 DB（如 Redis）中，失效则删除；但增加了一个每次校验时候都要先从 DB 中查询 token是否存在的步骤，而且违背了 JWT 的无状态原则（不推荐）。</li> <li>2,维护一个 token 黑名单，失效则加入黑名单中(用的比较多)。</li> <li>3,在 JWT 中增加一个版本号字段，失效则改变该版本号。</li> <li>4,在服务端设置加密的 key 时，为每个用户生成唯一的 key，失效则改变该 key。</li></ul></blockquote> <h6 id="黑名单"><a href="#黑名单" class="header-anchor">#</a> 黑名单</h6> <blockquote><ul><li>1,在签发的jwt中payload加入一个为随机字符的字段<code>token_id</code>.</li> <li>2, 在服务端的分布式缓存上保存一份“groupId”黑名单。如果用户的jwt重置密码等需要作废已经签发但未过期的jwt时，就将该之前用户的“token__id”存入到黑名单中。并分配给他一个新的“token__id”到token中.</li> <li>3,存入到黑名单中的“token__id”会设置一个过期时间.过期后“token_id”自动从黑名单中删除。</li> <li>4,所有需要做JWT有效性校验的服务器,启动时访问分布式缓存. 将黑名单下载到本地内存。并且订阅分布式缓存的消息推送功能，在黑名单发生增删的时候，接收推送消息同步修改内存中的黑名单列表。</li> <li>5,服务器做JWT校验的时候，除了校验过期时间，还要查询内存中的黑名单列表。若在黑名单中，则判定该JWT为失效。</li></ul></blockquote> <p>虽然黑名单还是做了分布式存储,但黑名单本身的体积和使用频率却很低,所以开销很小.</p> <h3 id="单点登录-sso"><a href="#单点登录-sso" class="header-anchor">#</a> 单点登录（sso）</h3> <p>单点登录（Single Sign On），简称为 SSO，是目前比较流行的企业业务整合的解决方案之一。SSO的定义是在多个应用系统中，<strong>用户只需要登录一次就可以访问所有相互信任的应用系统。</strong></p> <p>SSO一般都需要一个独立的认证中心（passport），子系统的登录均得通过passport，子系统本身将不参与登录操作，当一个系统成功登录以后，passport将会颁发一个令牌给各个子系统，子系统可以拿着令牌会获取各自的受保护资源，为了减少频繁认证，各个子系统在被passport授权以后，会建立一个局部会话，在一定时间内可以无需再次向passport发起认证。</p> <p>流程如图
+<img src="/img/auth.png" alt="dock"></p> <ul><li>用户访问系统1的受保护资源，系统1发现用户未登录，跳转至sso认证中心，并将自己的地址作为参数</li> <li>sso认证中心发现用户未登录，将用户引导至登录页面</li> <li>用户输入用户名密码提交登录申请</li> <li>sso认证中心校验用户信息，创建用户与sso认证中心之间的会话，称为全局会话，同时创建授权令牌</li> <li>sso认证中心带着令牌跳转会最初的请求地址（系统1）</li> <li>系统1拿到令牌，去sso认证中心校验令牌是否有效</li> <li>sso认证中心校验令牌，返回有效，注册系统1</li> <li>系统1使用该令牌创建与用户的会话，称为局部会话，返回受保护资源</li> <li>用户访问系统2的受保护资源</li> <li>系统2发现用户未登录，跳转至sso认证中心，并将自己的地址作为参数</li> <li>sso认证中心发现用户已登录，跳转回系统2的地址，并附上令牌</li> <li>系统2拿到令牌，去sso认证中心校验令牌是否有效</li> <li>sso认证中心校验令牌，返回有效，注册系统2</li> <li>系统2使用该令牌创建与用户的局部会话，返回受保护资源</li></ul> <p>用户登录成功之后，会与sso认证中心及各个子系统建立会话，用户与sso认证中心建立的会话称为全局会话，用户与各个子系统建立的会话称为局部会话，局部会话建立之后，用户访问子系统受保护资源将不再通过sso认证中心，全局会话与局部会话有如下约束关系</p> <ul><li>局部会话存在，全局会话一定存在</li> <li>全局会话存在，局部会话不一定存在</li> <li>全局会话销毁，局部会话必须销毁</li></ul> <p>注销如图
+<img src="/img/auth1.png" alt="dock"></p> <p>sso认证中心一直监听全局会话的状态，一旦全局会话销毁，监听器将通知所有注册系统执行注销操作。</p> <ul><li>用户向系统1发起注销请求</li> <li>系统1根据用户与系统1建立的会话id拿到令牌，向sso认证中心发起注销请求</li> <li>sso认证中心校验令牌有效，销毁全局会话，同时取出所有用此令牌注册的系统地址</li> <li>sso认证中心向所有注册系统发起注销请求</li> <li>各注册系统接收sso认证中心的注销请求，销毁局部会话</li> <li>sso认证中心引导用户至登录页面</li></ul> <h2 id="oauth"><a href="#oauth" class="header-anchor">#</a> OAuth</h2> <p>三方登入主要基于OAuth 2.0。OAuth即开发授权,其实和SSO比较像.OAuth协议为用户资源的授权提供了一个安全的、开放而又简易的标  准。与以往的授权方式不同之处是OAuth的授权不会使第三方触及到用户的帐号信息(如用户名与密码)，  即第三方无需使用用户的用户名与密码就可以申请获得该用户资源的授权，因此OAuth是安全的。我们常见的提供OAuth认证服务的厂商有支付宝、QQ、微信。这样的授权方式使得用户使用门槛低，可以更好的推广自己的应用。</p> <h4 id="oauth认证流程"><a href="#oauth认证流程" class="header-anchor">#</a> OAuth认证流程</h4> <p>OAuth就是一种授权机制。数据的所有者告诉系统，同意授权第三方应用进入系统，获取这些数据。系统从而产生一个短期的进入令牌（token），用来代替密码，供第三方应用使用。
+ OAuth有四种获取令牌的方式，不管哪一种授权方式，第三方应用申请令牌之前，都必须先到系统备案，说明自己的身份，然后会拿到两个身份识别码：客户端 ID（client ID）和客户端密钥（client secret）。这是为了防止令牌被滥用，没有备案过的第三方应用，是不会拿到令牌的。
+  在前后端分离的情境下，我们常使用授权码方式，指的是第三方应用先申请一个授权码，然后再用该码获取令牌。</p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/cats1/vuepresshome/edit/main/docs/backend/koa/auth.md" target="_blank" rel="noopener noreferrer">有问题需改善此页面!</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/backend/koa/" class="prev router-link-active">
+        Koa2
+      </a></span> <span class="next"><a href="/backend/koa/controller.html">
+        控制器
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.a4743452.js" defer></script><script src="/assets/js/2.b72805e3.js" defer></script><script src="/assets/js/16.360281d8.js" defer></script>
+  </body>
+</html>

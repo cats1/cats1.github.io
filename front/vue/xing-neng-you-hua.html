@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vue 性能优化 | lana&#39;s home</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="vuepress 前端个人学习网站">
+    
+    <link rel="preload" href="/assets/css/0.styles.98530cad.css" as="style"><link rel="preload" href="/assets/js/app.a4743452.js" as="script"><link rel="preload" href="/assets/js/2.b72805e3.js" as="script"><link rel="preload" href="/assets/js/134.ea062f20.js" as="script"><link rel="prefetch" href="/assets/js/10.97c6631e.js"><link rel="prefetch" href="/assets/js/100.ddd238ad.js"><link rel="prefetch" href="/assets/js/101.acf46de3.js"><link rel="prefetch" href="/assets/js/102.7ecc34c5.js"><link rel="prefetch" href="/assets/js/103.9abec0c7.js"><link rel="prefetch" href="/assets/js/104.99a0bd64.js"><link rel="prefetch" href="/assets/js/105.5bd4279e.js"><link rel="prefetch" href="/assets/js/106.4a1a1e6d.js"><link rel="prefetch" href="/assets/js/107.53190e25.js"><link rel="prefetch" href="/assets/js/108.afb416d9.js"><link rel="prefetch" href="/assets/js/109.9c89f8cf.js"><link rel="prefetch" href="/assets/js/11.efe147a8.js"><link rel="prefetch" href="/assets/js/110.77f01a7c.js"><link rel="prefetch" href="/assets/js/111.f8ccec3a.js"><link rel="prefetch" href="/assets/js/112.a1b70a36.js"><link rel="prefetch" href="/assets/js/113.f74d3176.js"><link rel="prefetch" href="/assets/js/114.9f4f70ac.js"><link rel="prefetch" href="/assets/js/115.3e915f82.js"><link rel="prefetch" href="/assets/js/116.21d4d9f8.js"><link rel="prefetch" href="/assets/js/117.ed1ac975.js"><link rel="prefetch" href="/assets/js/118.b60ec45f.js"><link rel="prefetch" href="/assets/js/119.a28f9722.js"><link rel="prefetch" href="/assets/js/12.f8166b62.js"><link rel="prefetch" href="/assets/js/120.5f45ba33.js"><link rel="prefetch" href="/assets/js/121.e2c73c6e.js"><link rel="prefetch" href="/assets/js/122.bea0d35f.js"><link rel="prefetch" href="/assets/js/123.4918a056.js"><link rel="prefetch" href="/assets/js/124.e9d5fd6b.js"><link rel="prefetch" href="/assets/js/125.378cd9ad.js"><link rel="prefetch" href="/assets/js/126.785be7e4.js"><link rel="prefetch" href="/assets/js/127.2dfe1120.js"><link rel="prefetch" href="/assets/js/128.0eeadbcb.js"><link rel="prefetch" href="/assets/js/129.ffd3ffd2.js"><link rel="prefetch" href="/assets/js/13.669aa6cb.js"><link rel="prefetch" href="/assets/js/130.e3caaa90.js"><link rel="prefetch" href="/assets/js/131.8914dd22.js"><link rel="prefetch" href="/assets/js/132.0ae37932.js"><link rel="prefetch" href="/assets/js/133.e989899b.js"><link rel="prefetch" href="/assets/js/135.6c137b49.js"><link rel="prefetch" href="/assets/js/14.c9aa70a1.js"><link rel="prefetch" href="/assets/js/15.3d05e5f2.js"><link rel="prefetch" href="/assets/js/16.360281d8.js"><link rel="prefetch" href="/assets/js/17.ff7cabb3.js"><link rel="prefetch" href="/assets/js/18.be16eeed.js"><link rel="prefetch" href="/assets/js/19.81b3a31e.js"><link rel="prefetch" href="/assets/js/20.472bc449.js"><link rel="prefetch" href="/assets/js/21.86395f2b.js"><link rel="prefetch" href="/assets/js/22.6c69ed50.js"><link rel="prefetch" href="/assets/js/23.2f198631.js"><link rel="prefetch" href="/assets/js/24.748c9bc2.js"><link rel="prefetch" href="/assets/js/25.c5065323.js"><link rel="prefetch" href="/assets/js/26.61d441a1.js"><link rel="prefetch" href="/assets/js/27.bfd0a986.js"><link rel="prefetch" href="/assets/js/28.bafeb054.js"><link rel="prefetch" href="/assets/js/29.0d2a1bfd.js"><link rel="prefetch" href="/assets/js/3.7f8809fd.js"><link rel="prefetch" href="/assets/js/30.8bb40757.js"><link rel="prefetch" href="/assets/js/31.eac619f5.js"><link rel="prefetch" href="/assets/js/32.04c63c5c.js"><link rel="prefetch" href="/assets/js/33.ae09c55e.js"><link rel="prefetch" href="/assets/js/34.1145a6f4.js"><link rel="prefetch" href="/assets/js/35.feb9083f.js"><link rel="prefetch" href="/assets/js/36.a586ce8a.js"><link rel="prefetch" href="/assets/js/37.c61e20e9.js"><link rel="prefetch" href="/assets/js/38.991c3427.js"><link rel="prefetch" href="/assets/js/39.23356a49.js"><link rel="prefetch" href="/assets/js/4.6819ae80.js"><link rel="prefetch" href="/assets/js/40.a3ca9111.js"><link rel="prefetch" href="/assets/js/41.649b9d9b.js"><link rel="prefetch" href="/assets/js/42.fde8ad7b.js"><link rel="prefetch" href="/assets/js/43.2d876a7c.js"><link rel="prefetch" href="/assets/js/44.64c20de7.js"><link rel="prefetch" href="/assets/js/45.a901a632.js"><link rel="prefetch" href="/assets/js/46.4ac83b64.js"><link rel="prefetch" href="/assets/js/47.2b45c49a.js"><link rel="prefetch" href="/assets/js/48.2bc12623.js"><link rel="prefetch" href="/assets/js/49.52a95dcd.js"><link rel="prefetch" href="/assets/js/5.20de2bc4.js"><link rel="prefetch" href="/assets/js/50.f445c922.js"><link rel="prefetch" href="/assets/js/51.07570e18.js"><link rel="prefetch" href="/assets/js/52.cf21a2b8.js"><link rel="prefetch" href="/assets/js/53.77792ddd.js"><link rel="prefetch" href="/assets/js/54.f19c487a.js"><link rel="prefetch" href="/assets/js/55.7fb0d05b.js"><link rel="prefetch" href="/assets/js/56.62fd0b66.js"><link rel="prefetch" href="/assets/js/57.1d6b0809.js"><link rel="prefetch" href="/assets/js/58.1aed920b.js"><link rel="prefetch" href="/assets/js/59.c2ab9dbe.js"><link rel="prefetch" href="/assets/js/6.e9784f3e.js"><link rel="prefetch" href="/assets/js/60.f4e387a9.js"><link rel="prefetch" href="/assets/js/61.735cc066.js"><link rel="prefetch" href="/assets/js/62.312489f2.js"><link rel="prefetch" href="/assets/js/63.dd2a2d4e.js"><link rel="prefetch" href="/assets/js/64.67dfd073.js"><link rel="prefetch" href="/assets/js/65.c2c22de8.js"><link rel="prefetch" href="/assets/js/66.7ea30a4b.js"><link rel="prefetch" href="/assets/js/67.6913be8c.js"><link rel="prefetch" href="/assets/js/68.b743701c.js"><link rel="prefetch" href="/assets/js/69.088259eb.js"><link rel="prefetch" href="/assets/js/7.80ddef84.js"><link rel="prefetch" href="/assets/js/70.10e2101b.js"><link rel="prefetch" href="/assets/js/71.11121db3.js"><link rel="prefetch" href="/assets/js/72.38811b9b.js"><link rel="prefetch" href="/assets/js/73.b5030976.js"><link rel="prefetch" href="/assets/js/74.d218c8d5.js"><link rel="prefetch" href="/assets/js/75.89c8d415.js"><link rel="prefetch" href="/assets/js/76.998def7e.js"><link rel="prefetch" href="/assets/js/77.6cff4b72.js"><link rel="prefetch" href="/assets/js/78.45b13ba4.js"><link rel="prefetch" href="/assets/js/79.50d5b3d0.js"><link rel="prefetch" href="/assets/js/8.4ebeab97.js"><link rel="prefetch" href="/assets/js/80.e38925eb.js"><link rel="prefetch" href="/assets/js/81.c712e794.js"><link rel="prefetch" href="/assets/js/82.f4018c72.js"><link rel="prefetch" href="/assets/js/83.878fb392.js"><link rel="prefetch" href="/assets/js/84.7ddaa3ca.js"><link rel="prefetch" href="/assets/js/85.06c8fa8b.js"><link rel="prefetch" href="/assets/js/86.b889a2e3.js"><link rel="prefetch" href="/assets/js/87.2f3171f1.js"><link rel="prefetch" href="/assets/js/88.1b0c6839.js"><link rel="prefetch" href="/assets/js/89.293034a1.js"><link rel="prefetch" href="/assets/js/9.07e73bd0.js"><link rel="prefetch" href="/assets/js/90.cdd9df6a.js"><link rel="prefetch" href="/assets/js/91.e53063a5.js"><link rel="prefetch" href="/assets/js/92.0a41da3b.js"><link rel="prefetch" href="/assets/js/93.83c37c7e.js"><link rel="prefetch" href="/assets/js/94.14eea0cb.js"><link rel="prefetch" href="/assets/js/95.18279896.js"><link rel="prefetch" href="/assets/js/96.e06d8e4e.js"><link rel="prefetch" href="/assets/js/97.2b60994e.js"><link rel="prefetch" href="/assets/js/98.28ad17a5.js"><link rel="prefetch" href="/assets/js/99.2abf3996.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.98530cad.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="lana's home" class="logo"> <span class="site-name can-hide">lana's home</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="随笔" class="dropdown-title"><span class="title">随笔</span> <span class="arrow down"></span></button> <button type="button" aria-label="随笔" class="mobile-dropdown-title"><span class="title">随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/front/html5/" class="nav-link">
+  Html5
+</a></li><li class="dropdown-subitem"><a href="/front/css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-subitem"><a href="/front/js/" class="nav-link">
+  js
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/backend/nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-subitem"><a href="/backend/koa/" class="nav-link">
+  Koa
+</a></li><li class="dropdown-subitem"><a href="/backend/mongodb/" class="nav-link">
+  Mongodb
+</a></li></ul></li><li class="dropdown-item"><h4>
+          服务器
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/backend/nginx/" class="nav-link">
+  Nginx
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/guide/guide.html" class="nav-link">
+  指引
+</a></div><div class="nav-item"><a href="https://gitee.com/lanasine" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/cats1/vuepresshome" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="随笔" class="dropdown-title"><span class="title">随笔</span> <span class="arrow down"></span></button> <button type="button" aria-label="随笔" class="mobile-dropdown-title"><span class="title">随笔</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/front/html5/" class="nav-link">
+  Html5
+</a></li><li class="dropdown-subitem"><a href="/front/css/" class="nav-link">
+  Css
+</a></li><li class="dropdown-subitem"><a href="/front/js/" class="nav-link">
+  js
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/backend/nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-subitem"><a href="/backend/koa/" class="nav-link">
+  Koa
+</a></li><li class="dropdown-subitem"><a href="/backend/mongodb/" class="nav-link">
+  Mongodb
+</a></li></ul></li><li class="dropdown-item"><h4>
+          服务器
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/backend/nginx/" class="nav-link">
+  Nginx
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/guide/guide.html" class="nav-link">
+  指引
+</a></div><div class="nav-item"><a href="https://gitee.com/lanasine" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/cats1/vuepresshome" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Backend</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Front</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/front/" aria-current="page" class="sidebar-link">前端</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Css</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Echarts</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Git</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Html 5</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Js</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Network</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>React</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Treejs</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Vscode</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>Vue</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/front/vue/" aria-current="page" class="sidebar-link">vue</a></li><li><a href="/front/vue/ssr.html" class="sidebar-link">SSR</a></li><li><a href="/front/vue/untitled.html" class="sidebar-link">/front/vue/untitled.html</a></li><li><a href="/front/vue/axios.html" class="sidebar-link">axios</a></li><li><a href="/front/vue/mavoneditor.html" class="sidebar-link">mavonEditor</a></li><li><a href="/front/vue/que1.html" class="sidebar-link">Vue3有哪些不向下兼容的改变</a></li><li><a href="/front/vue/vue-cli.html" class="sidebar-link">vue-cli</a></li><li><a href="/front/vue/vue-router.html" class="sidebar-link">vue-router路由管理</a></li><li><a href="/front/vue/vue-rules.html" class="sidebar-link">风格指南</a></li><li><a href="/front/vue/vuex.html" class="sidebar-link">vuex状态管理</a></li><li><a href="/front/vue/xing-neng-you-hua.html" aria-current="page" class="active sidebar-link">Vue 性能优化</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/front/vue/xing-neng-you-hua.html#图片优化" class="sidebar-link">图片优化</a></li><li class="sidebar-sub-header"><a href="/front/vue/xing-neng-you-hua.html#打包优化" class="sidebar-link">打包优化</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/front/vue/xing-neng-you-hua.html#路由懒加载" class="sidebar-link">路由懒加载</a></li><li class="sidebar-sub-header"><a href="/front/vue/xing-neng-you-hua.html#组件懒加载" class="sidebar-link">组件懒加载</a></li><li class="sidebar-sub-header"><a href="/front/vue/xing-neng-you-hua.html#第三方cdn" class="sidebar-link">第三方CDN</a></li><li class="sidebar-sub-header"><a href="/front/vue/xing-neng-you-hua.html#splitchunk" class="sidebar-link">splitChunk</a></li><li class="sidebar-sub-header"><a href="/front/vue/xing-neng-you-hua.html#image-webpack-loader" class="sidebar-link">Image-webpack-loader</a></li><li class="sidebar-sub-header"><a href="/front/vue/xing-neng-you-hua.html#去除console" class="sidebar-link">去除console</a></li><li class="sidebar-sub-header"><a href="/front/vue/xing-neng-you-hua.html#gzip" class="sidebar-link">gzip</a></li><li class="sidebar-sub-header"><a href="/front/vue/xing-neng-you-hua.html#热更新失效" class="sidebar-link">热更新失效</a></li></ul></li><li class="sidebar-sub-header"><a href="/front/vue/xing-neng-you-hua.html#代码优化" class="sidebar-link">代码优化</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/front/vue/xing-neng-you-hua.html#v-if-与-v-show" class="sidebar-link">v-if 与 v-show</a></li><li class="sidebar-sub-header"><a href="/front/vue/xing-neng-you-hua.html#v-for-与-v-if-与-key" class="sidebar-link">v-for 与 v-if 与 key</a></li><li class="sidebar-sub-header"><a href="/front/vue/xing-neng-you-hua.html#按需引入" class="sidebar-link">按需引入</a></li></ul></li><li class="sidebar-sub-header"><a href="/front/vue/xing-neng-you-hua.html#其它优化" class="sidebar-link">其它优化</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/front/vue/xing-neng-you-hua.html#seo优化" class="sidebar-link">SEO优化</a></li></ul></li></ul></li><li><section class="sidebar-group collapsable is-sub-group depth-2"><p class="sidebar-heading"><span>Vue 3</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Guide</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vue-性能优化"><a href="#vue-性能优化" class="header-anchor">#</a> Vue 性能优化</h1> <h2 id="图片优化"><a href="#图片优化" class="header-anchor">#</a> 图片优化</h2> <h2 id="打包优化"><a href="#打包优化" class="header-anchor">#</a> 打包优化</h2> <h3 id="路由懒加载"><a href="#路由懒加载" class="header-anchor">#</a> 路由懒加载</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>{
+   path: '/home',
+   name: 'home',
+   component: import(/* webpackChunkName: '你要设置的chunk的name' */ '../page/home')
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="组件懒加载"><a href="#组件懒加载" class="header-anchor">#</a> 组件懒加载</h3> <p>这里的 <code>/* webpackChunkName: &quot;[request]&quot; */</code> 中的 <code>request</code> 表示实际解析的文件名。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const Tabs = () =&gt; import(/* webpackChunkName: &quot;[request]&quot; */'_c/Tabs')
+
+export default {
+    components: {
+        IconList
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="第三方cdn"><a href="#第三方cdn" class="header-anchor">#</a> 第三方CDN</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>//vue.config.js
+// chainWebpack中，判断是生产环境时
+	config.externals({	//这里需要注意，chainWebpack是链式调用，所以这边是一个函数，不然我们的包不会被排除
+            vue: 'Vue',
+            'element-ui': 'ELEMENT',
+            'vue-router': 'VueRouter',
+            vuex: 'Vuex',
+            axios: 'axios',
+            'echarts': 'echarts'
+          })
+          const cdn = {
+            css: ['//unpkg.com/element-ui@2.13.2/lib/theme-chalk/index.css'],
+            js: [
+              '//unpkg.com/vue@2.6.10/dist/vue.min.js',
+              '//unpkg.com/vue-router@3.0.2/dist/vue-router.min.js',
+              '//unpkg.com/vuex@3.1.0/dist/vuex.min.js',
+              '//unpkg.com/axios@0.18.1/dist/axios.min.js',
+              '//unpkg.com/element-ui@2.13.2/lib/index.js',
+              'https://cdn.bootcdn.net/ajax/libs/echarts/4.2.1/echarts.min.js'
+            ]
+          }
+          config.plugin('html').tap(args =&gt; {
+            args[0].cdn = cdn
+            return args
+          })
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><p>到这里之后，我们不要忘记在index.html中添加cdn的引用~</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token comment">&lt;!-- 使用CDN的CSS文件 --&gt;</span>
+&lt;% for (var i in htmlWebpackPlugin.options.cdn &amp;&amp;
+htmlWebpackPlugin.options.cdn.css) { %&gt;
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>stylesheet<span class="token punctuation">&quot;</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>&lt;%= htmlWebpackPlugin.options.cdn.css[i] %&gt;<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+  &lt;% } %&gt;
+
+  <span class="token comment">&lt;!-- 使用CDN的JS文件 --&gt;</span>
+  &lt;% for (var i in htmlWebpackPlugin.options.cdn &amp;&amp;
+htmlWebpackPlugin.options.cdn.js) { %&gt;
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text/javascript<span class="token punctuation">&quot;</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>&lt;%= htmlWebpackPlugin.options.cdn.js[i] %&gt;<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+  &lt;% } %&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>当然了，如果你不喜欢这种写法，我们还以使用一种更加朴素的写法~</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>stylesheet<span class="token punctuation">&quot;</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>https://unpkg.com/element-ui/lib/theme-chalk/index.css<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>https://unpkg.com/element-ui/lib/index.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="splitchunk"><a href="#splitchunk" class="header-anchor">#</a> splitChunk</h3> <p>对于splitChunk，目前已经可以搜索到很多的使用方式了 首先，虽然我们都说它的最重要的配置项是cacheGroups,但是其它的我们也需要去了解，有的时候如果不解的话，就有可能会踩坑</p> <ol><li>chunks：表示从哪些chunks里面抽取代码，除了三个可选字符串值 initial、async、all 之外，还可以通过函数来过滤所需的 chunks；</li> <li>minSize：表示抽取出来的文件在压缩前的最小大小，默认为 30000；</li> <li>maxSize：表示抽取出来的文件在压缩前的最大大小，默认为 0，表示不限制最大大小；</li> <li>minChunks：表示被引用次数，默认为1；</li> <li>maxAsyncRequests：最大的按需(异步)加载次数，默认为 5；</li> <li>maxInitialRequests：最大的初始化加载次数，默认为 3；</li> <li>automaticNameDelimiter：抽取出来的文件的自动生成名字的分割符，默认为 ~；</li> <li>name：抽取出来文件的名字，默认为 true，表示自动生成文件名；</li> <li>cacheGroups: 缓存组</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>	//vue.config.js =&gt; chainWebpack(config)
+		config
+            .optimization.splitChunks({
+              chunks: 'all',
+              cacheGroups: {
+                libs: {
+                  name: 'chunk-libs',
+                  test: /[\\/]node_modules[\\/]/,
+                  priority: 10,
+                  chunks: 'initial' 
+                },
+                vexTable: {
+                  name: 'chunk-vexTable', 
+                  priority: 30,
+                  test: /[\\/]node_modules[\\/]_?vxe-table(.*)/ 
+                },
+                moment: {
+                  name: 'chunk-moment', 
+                  priority: 30, 
+                  test: /[\\/]node_modules[\\/]_?moment(.*)/ 
+                },
+                commons: {
+                  name: 'chunk-commons',
+                  test: resolve('src/components'), 
+                  minChunks: 1, 
+                  priority: 5,
+                  reuseExistingChunk: true
+                }
+              }
+            })
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div><h3 id="image-webpack-loader"><a href="#image-webpack-loader" class="header-anchor">#</a> Image-webpack-loader</h3> <p><code>Image-webpack-loader</code> 可以在打包的时候对图片进行优化</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>chainWebpack(config) {
+  /** 忽略其它配置 ***/
+  config
+      .when(process.env.NODE_ENV !== 'development',
+   /** 忽略其它配置 ***/
+        config =&gt; {
+          config.module
+            .rule('images')
+            .use('image-webpack-loader')
+            .loader('image-webpack-loader')
+            .options({
+              mozjpeg: { progressive: true, quality: 65 },
+              optipng: { enabled: false },
+              pngquant: { quality: [0.65, 0.9], speed: 4 },
+              gifsicle: { interlaced: false }
+              // webp: { quality: 75 }
+            })
+    /** 忽略其它配置 ***/
+        })
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h3 id="去除console"><a href="#去除console" class="header-anchor">#</a> 去除console</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>config.optimization.minimizer('terser').tap((args) =&gt; {
+  // 去除生产环境console
+  args[0].terserOptions.compress.drop_console = true
+  return args
+})
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="gzip"><a href="#gzip" class="header-anchor">#</a> gzip</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>compression-webpack-plugin
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="热更新失效"><a href="#热更新失效" class="header-anchor">#</a> 热更新失效</h3> <p>config.resolve.symlinks(true);</p> <h2 id="代码优化"><a href="#代码优化" class="header-anchor">#</a> 代码优化</h2> <h3 id="v-if-与-v-show"><a href="#v-if-与-v-show" class="header-anchor">#</a> v-if 与 v-show</h3> <h3 id="v-for-与-v-if-与-key"><a href="#v-for-与-v-if-与-key" class="header-anchor">#</a> v-for 与 v-if 与 key</h3> <h3 id="按需引入"><a href="#按需引入" class="header-anchor">#</a> 按需引入</h3> <h2 id="其它优化"><a href="#其它优化" class="header-anchor">#</a> 其它优化</h2> <h3 id="seo优化"><a href="#seo优化" class="header-anchor">#</a> SEO优化</h3></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/cats1/vuepresshome/edit/main/docs/front/vue/性能优化.md" target="_blank" rel="noopener noreferrer">有问题需改善此页面!</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/front/vue/vuex.html" class="prev">
+        vuex状态管理
+      </a></span> <span class="next"><a href="/front/vue/vue3/">
+        vue3
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.a4743452.js" defer></script><script src="/assets/js/2.b72805e3.js" defer></script><script src="/assets/js/134.ea062f20.js" defer></script>
+  </body>
+</html>
